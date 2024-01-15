@@ -327,9 +327,10 @@ function generateStuff(
   
   if (!memo[root.schema]) {
     memo[root.schema] = {
-      [root.name]: Array.from({ length: count }, () => ({})),
     };
   }
+
+  memo[root.schema][root.name] = [];
 
   for (let i = 0; i < count; i++) {
     const row = {};
